@@ -7,5 +7,5 @@ build
 *.egg-info
 .vscode
 .vs
-./metal-cpp
-./venv
+metal-cpp/
+venv/
