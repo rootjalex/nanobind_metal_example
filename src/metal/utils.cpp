@@ -1,5 +1,5 @@
 // metal_utils.cpp
-#include "metal_utils.h"
+#include "utils.h"
 
 #include <iostream>
 #include <filesystem>
@@ -52,7 +52,7 @@ NS::SharedPtr<MTL::CommandBuffer> getCommandBuffer() {
     return NS::TransferPtr<MTL::CommandBuffer>(getCommandQueue()->commandBuffer());
 }
 
-void metal_synchronize() {
+void synchronize() {
     // Get new command buffer and wait on it.
     // All prior command buffers must finish first.
     auto commandBuffer = getCommandBuffer();

@@ -1,6 +1,6 @@
-#include "metal_add.h"
+#include "add.h"
 
-#include "metal_utils.h"
+#include "utils.h"
 
 NS::SharedPtr<MTL::Library> getMetalLibrary() {
     // Must be static for efficiency

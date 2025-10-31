@@ -1,6 +1,6 @@
 #pragma once
 
-#include "utils.h"
+#include "nb_utils.h"
 
 // Allocates and returns a new buffer
 GPUVector<float> vecf_add(const GPUVector<float>& a, const GPUVector<float>& b);

@@ -92,4 +92,4 @@ MTL::Buffer *makeDeviceBuffer(NS::SharedPtr<MTL::Device> device, const size_t &s
     return device->newBuffer(NS::UInteger(size * sizeof(T)), MTL::ResourceOptions(MTL::ResourceStorageModeShared));
 }
 
-void metal_synchronize();
+void synchronize();

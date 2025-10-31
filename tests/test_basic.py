@@ -1,4 +1,4 @@
-import nanobind_metal_example
+import nanobind_gpu_example
 import torch
 import time
 
@@ -33,18 +33,18 @@ def test_metal_add_helper(n: int):
 
     torch.mps.synchronize()
     # Warmup (important to trigger Metal pipeline compilation)
-    # _ = nanobind_metal_example.vecf_add(x, y)
+    # _ = nanobind_gpu_example.vecf_add(x, y)
     for i in range(iters):
-        nanobind_metal_example.vecf_add_out(x, y, r_metal)
-        nanobind_metal_example.synchronize()
+        nanobind_gpu_example.vecf_add_out(x, y, r_metal)
+        nanobind_gpu_example.synchronize()
 
     # --- nanobind Metal add timing ---
 
     metal_times = []
     for _ in range(iters):
         t0 = time.perf_counter()
-        nanobind_metal_example.vecf_add_out(x, y, r_metal)
-        nanobind_metal_example.synchronize()
+        nanobind_gpu_example.vecf_add_out(x, y, r_metal)
+        nanobind_gpu_example.synchronize()
         t1 = time.perf_counter()
         metal_times.append((t1 - t0) * 1000.0)  # ms
 

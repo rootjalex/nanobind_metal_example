@@ -3,7 +3,7 @@ requires = ["scikit-build-core >=0.10", "nanobind >=1.3.2"]
 build-backend = "scikit_build_core.build"
 
 [project]
-name = "nanobind-metal-example"
+name = "nanobind-gpu-example"
 version = "0.0.1"
 description = "An example minimal project that compiles bindings using nanobind and scikit-build"
 readme = "README.md"
@@ -16,7 +16,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/rootjalex/nanobind_metal_example"
+Homepage = "https://github.com/rootjalex/nanobind_gpu_example"
 
 
 [tool.scikit-build]
