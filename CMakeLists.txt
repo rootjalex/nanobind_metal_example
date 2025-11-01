@@ -78,7 +78,7 @@ if(HAS_CUDA)
   include_directories(${CUDAToolkit_INCLUDE_DIRS})
 
   # Collect CUDA-specific sources
-  file(GLOB CUDA_SOURCES "${SRC_DIR}/cuda/*.cu" "${SRC_DIR}/cuda/*.cpp")
+  file(GLOB CUDA_SOURCES "${SRC_DIR}/cuda/kernels/*.cu" "${SRC_DIR}/cuda/*.cpp")
   list(APPEND SRC_FILES ${CUDA_SOURCES})
 
   # Query available GPU architectures
